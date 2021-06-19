@@ -1,8 +1,6 @@
-@use './partials/typography';
-@use './partials/reset';
 @use './partials/variables' as *;
-@use './partials/button';
 @use './partials/mixins' as *;
+@use './partials/typography';
 
 body {
   height: 100vh;
