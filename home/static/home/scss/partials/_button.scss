@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+.btn {
+  padding: 1rem 1.8rem;
+  cursor: pointer;
+  background-color: $primary-color;
+  border: none;
+  color: $secondary-color;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: bold;
+  position: relative;
+  transition: all 300ms;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 10px $third-color;
+  }
+}

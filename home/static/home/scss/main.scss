@@ -1,0 +1,47 @@
+@use './partials/typography';
+@use './partials/reset';
+@use './partials/variables' as *;
+@use './partials/button';
+@use './partials/mixins' as *;
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(315deg, $third-color 0%, $secondary-color 74%);
+  background-repeat: no-repeat;
+  font-family: "Titillium Web", sans-serif;
+  color: $primary-color;
+}
+
+.home {
+  padding: 2.5rem;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+
+    @include media-query-down(576px) {
+      flex-direction: column-reverse;
+    }
+
+    img {
+      width: 100%;
+      min-width: 380px;
+    }
+
+    .left-content {
+      @include media-query-down(576px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .wave {
+    position: absolute;
+    inset: auto 0 0 0;
+  }
+}

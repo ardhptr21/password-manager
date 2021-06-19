@@ -1,0 +1,18 @@
+@use './variables' as *;
+// FONT => TITILLIUM WEB
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+.title-page {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+.desc-title {
+  font-size: 1.3rem;
+  color: $white-color;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
