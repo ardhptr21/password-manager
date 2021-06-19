@@ -1,0 +1,27 @@
+{% extends 'auth/base.html' %} {% load static %}
+<!-- PAGE TITLE -->
+{% block title %}{{ block.super }} | Register{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="container">
+  <div class="auth">
+    <div class="left-content">
+      <div class="text">
+        <h1 class="title-page">Register</h1>
+        <p class="desc">let's create your new account</p>
+      </div>
+      <img src="{% static 'auth/images/register.svg' %}" alt="" />
+    </div>
+    <div class="right-content">
+      <form action="">
+        <input type="text" name="email" id="email" autocomplete="off" placeholder="email" required />
+        <input type="text" name="username" id="username" autocomplete="off" placeholder="username" required />
+        <input type="password" name="password" id="password" placeholder="password" required />
+        <button type="submit" class="btn btn-white btn-sm">Register</button>
+        <a href="{% url 'auth:login' %}" class="reglog">Already have an account? login</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

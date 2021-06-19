@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
 }
 
 .btn {
+  font-family: Helvetica, sans-serif;
   padding: 1rem 1.8rem;
   cursor: pointer;
   background-color: #101820;
@@ -19,9 +19,15 @@
   text-decoration: none;
   display: inline-block;
 }
+.btn-white {
+  background-color: #ffdd00;
+  color: #101820;
+}
+.btn-sm {
+  padding: 0.7rem 1.3rem;
+}
 .btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 7px 10px #fbb034;
 }
 
 /*# sourceMappingURL=base.css.map */

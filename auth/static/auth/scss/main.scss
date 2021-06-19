@@ -1,0 +1,57 @@
+@use './partials/typography';
+@use './partials/forms';
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.auth {
+  @include flex-center;
+  width: 100vw;
+  height: 100vh;
+
+  @include media-query(768px) {
+    flex-direction: column;
+  }
+
+  ::placeholder {
+    color: $white-color;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 100%;
+
+    &:hover {
+      background-color: $third-color;
+      transform: none;
+    }
+  }
+}
+
+.left-content {
+  background-image: linear-gradient(to top left, $third-color 0%, $secondary-color 74%);
+  background-repeat: no-repeat;
+  @include flex-center(column);
+  height: 100%;
+  width: 100%;
+  flex: 1.5;
+  padding: 1.5rem;
+
+  img {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+
+.right-content {
+  padding: 1.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  @include flex-center;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+
+  h3 {
+    text-transform: uppercase;
+  }
+}

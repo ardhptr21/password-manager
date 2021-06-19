@@ -1,0 +1,35 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.title-page {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: -20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.desc {
+  color: $white-color;
+  font-size: 1.5rem;
+  font-weight: 600;
+  @include media-query(400px) {
+    font-size: 1rem;
+  }
+}
+.reglog {
+  color: $white-color;
+  margin-top: 10px;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+.text {
+  @include flex-center(column);
+}

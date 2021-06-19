@@ -1,0 +1,26 @@
+{% extends 'auth/base.html' %} {% load static %}
+<!-- PAGE TITLE -->
+{% block title %}{{ block.super }} | Login{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="container">
+  <div class="auth">
+    <div class="left-content">
+      <div class="text">
+        <h1 class="title-page">Login</h1>
+        <p class="desc">Before entering you must to login first</p>
+      </div>
+      <img src="{% static 'auth/images/login.svg' %}" alt="" />
+    </div>
+    <div class="right-content">
+      <form action="">
+        <input type="text" name="username" id="username" autocomplete="off" placeholder="username" required />
+        <input type="password" name="password" id="password" placeholder="password" required />
+        <button type="submit" class="btn btn-white btn-sm">Login</button>
+        <a href="{% url 'auth:register' %}" class="reglog">Don't have an account? register</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

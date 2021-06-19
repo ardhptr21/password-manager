@@ -10,8 +10,8 @@
     <div class="left-content">
       <h1 class="title-page">password manager</h1>
       <p class="desc-title">Save your social media account password here, so you don't forget it</p>
-      <a href="#" class="btn">Show All</a>
-      <a href="#" class="btn">Create New</a>
+      <a href="{% url 'auth:login' %}" class="btn">Login</a>
+      <a href="{% url 'auth:register' %}" class="btn">Register</a>
     </div>
     <img src="{% static 'home/images/lock.svg' %}" alt="password secure image" />
   </div>
