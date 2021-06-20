@@ -1,0 +1,21 @@
+{% extends 'management/base.html' %} {% load static %}
+
+<!-- TITLE PAGE -->
+{% block title %}{{ block.super }} | List{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="management">
+  <h1 class="title-page">Management List</h1>
+  <form>
+    <input type="text" name="keyword" required />
+  </form>
+
+  <div class="list-card">
+    {% include 'management/partials/card.html' %} {% include 'management/partials/card.html' %}
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script src="{% static 'management/js/list.js' %}"></script>
+{% endblock content %}

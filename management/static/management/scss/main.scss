@@ -1,0 +1,26 @@
+@use './partials/typography';
+@use './partials/form';
+@use './partials/card';
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.management {
+  min-height: 100vh;
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 2rem;
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 3rem 0;
+  }
+
+  .list-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+  }
+}

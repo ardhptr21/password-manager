@@ -1,0 +1,32 @@
+@use './variables' as *;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.title-page {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.67rem;
+}
+
+.card {
+  .card-heading {
+    .site {
+      padding: 1rem;
+      a {
+        font-size: 2em;
+        display: inline-block;
+        font-weight: 900;
+        color: $white-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
