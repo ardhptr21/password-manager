@@ -1,7 +1,7 @@
 @use './variables' as *;
+@use './animation' as *;
 
 .card {
-  // width: 400px;
   overflow: hidden;
   border-radius: 10px;
   background-color: lighten($primary-color, 5%);
@@ -20,6 +20,10 @@
   .card-content {
     padding: 1rem;
 
+    .spin-anim {
+      animation: spin 0.8s ease-in-out;
+    }
+
     .wrapper {
       border: 2px solid $white-color;
       margin: 10px 0;
@@ -36,11 +40,6 @@
         width: 20px;
         color: $white-color;
         cursor: pointer;
-
-        &:hover {
-          color: $secondary-color;
-          transform: scale(1.2);
-        }
       }
     }
   }

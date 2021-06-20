@@ -6,11 +6,22 @@
 <!-- MAIN CONTENT -->
 {% block content %}
 <div class="management">
-  <h1 class="title-page">Management List</h1>
-  <form>
-    <input type="text" name="keyword" required />
-  </form>
-
+  <header>
+    <div class="left-content">
+      <img src="{% static 'management/images/list.svg' %}" alt="the illustration image list" />
+    </div>
+    <div class="right-content">
+      <h1 class="title-page">Your Account and Password List</h1>
+      <div class="action">
+        <a href="#" class="btn">Manage</a>
+        <a href="#" class="btn">Create New</a>
+      </div>
+      <form action="#">
+        <input type="text" name="search" placeholder="Search by site name" required />
+        <button class="btn btn-sm btn-white">Search</button>
+      </form>
+    </div>
+  </header>
   <div class="list-card">
     {% include 'management/partials/card.html' %} {% include 'management/partials/card.html' %}
   </div>

@@ -5,8 +5,20 @@ body {
 
 .title-page {
   text-align: center;
+  font-size: 2.5em;
   text-transform: uppercase;
-  letter-spacing: 0.67rem;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+}
+@media screen and (max-width: 768px) {
+  .title-page {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title-page {
+    font-size: 1.7em;
+  }
 }
 
 .card .card-heading .site {
@@ -19,24 +31,24 @@ body {
   color: #f2f3f4;
   text-decoration: none;
 }
+@media screen and (max-width: 376px) {
+  .card .card-heading .site a {
+    font-size: 1.7em;
+  }
+}
 .card .card-heading .site a:hover {
   color: #ffdd00;
   text-decoration: underline;
 }
 
-input {
-  width: 100%;
-  padding: 0.5rem;
-  background-color: transparent;
-  border-radius: 10px;
-  border: 2px solid #f2f3f4;
-  color: #ffdd00;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
 }
-input:focus, input:valid {
-  outline: none;
-  border-color: #ffdd00;
-}
-
 .card {
   overflow: hidden;
   border-radius: 10px;
@@ -53,6 +65,9 @@ input:focus, input:valid {
 }
 .card .card-content {
   padding: 1rem;
+}
+.card .card-content .spin-anim {
+  animation: spin 0.8s ease-in-out;
 }
 .card .card-content .wrapper {
   border: 2px solid #f2f3f4;
@@ -71,28 +86,77 @@ input:focus, input:valid {
   color: #f2f3f4;
   cursor: pointer;
 }
-.card .card-content .wrapper .icon:hover {
-  color: #ffdd00;
-  transform: scale(1.2);
+
+input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 2px solid #101820;
+  background-color: #e4e6e8;
+}
+input:focus {
+  outline: none;
 }
 
-.management {
-  min-height: 100vh;
-  background-color: #101820;
-  color: #ffdd00;
+.management header {
   padding: 2rem;
-}
-.management form {
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .management header {
+    flex-direction: column;
+  }
+}
+.management header .left-content {
+  flex: 1;
+}
+.management header .left-content img {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .management header .left-content img {
+    display: none;
+  }
+}
+.management header .right-content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.management header .right-content form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  margin: 3rem 0;
+}
+@media screen and (max-width: 376px) {
+  .management header .right-content .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 .management .list-card {
+  background-color: #101820;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
+}
+@media screen and (max-width: 576px) {
+  .management .list-card {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './mixins' as *;
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
@@ -7,8 +8,17 @@ body {
 
 .title-page {
   text-align: center;
+  font-size: 2.5em;
   text-transform: uppercase;
-  letter-spacing: 0.67rem;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+
+  @include media-query(768px) {
+    font-size: 2em;
+  }
+  @include media-query(576px) {
+    font-size: 1.7em;
+  }
 }
 
 .card {
@@ -21,6 +31,10 @@ body {
         font-weight: 900;
         color: $white-color;
         text-decoration: none;
+
+        @include media-query(376px) {
+          font-size: 1.7em;
+        }
 
         &:hover {
           color: $secondary-color;
