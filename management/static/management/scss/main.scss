@@ -1,10 +1,12 @@
 @use './partials/typography';
 @use './partials/card';
-@use './partials/input';
+@use './partials/form';
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
 .management {
+  min-height: 100vh;
+  background-color: $primary-color;
   header {
     padding: 2rem;
     background-image: linear-gradient(315deg, $third-color 0%, $secondary-color 74%);
@@ -35,14 +37,6 @@
       flex-direction: column;
       gap: 20px;
 
-      form {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-      }
-
       .action {
         @include media-query(376px) {
           display: flex;
@@ -55,7 +49,6 @@
   }
 
   .list-card {
-    background-color: $primary-color;
     padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -64,5 +57,11 @@
     @include media-query(576px) {
       grid-template-columns: 1fr;
     }
+  }
+
+  .create-form {
+    color: $secondary-color;
+    padding: 2rem;
+    margin-top: 2rem;
   }
 }

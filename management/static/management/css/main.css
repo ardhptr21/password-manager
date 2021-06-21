@@ -87,7 +87,7 @@ body {
   cursor: pointer;
 }
 
-input {
+#search {
   padding: 0.5rem;
   width: 100%;
   max-width: 400px;
@@ -95,10 +95,54 @@ input {
   border: 2px solid #101820;
   background-color: #e4e6e8;
 }
-input:focus {
+#search:focus {
   outline: none;
 }
 
+#list-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  margin: auto;
+}
+#create-form .btn {
+  width: 100%;
+}
+#create-form .btn:hover {
+  transform: none;
+  background-color: #fbb034;
+}
+#create-form ::placeholder {
+  color: #f2f3f4;
+}
+#create-form input {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #f2f3f4;
+  background-color: transparent;
+  color: #f2f3f4;
+}
+#create-form input:focus {
+  outline: none;
+  border-color: #ffdd00;
+}
+
+.management {
+  min-height: 100vh;
+  background-color: #101820;
+}
 .management header {
   padding: 2rem;
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
@@ -131,13 +175,6 @@ input:focus {
   flex-direction: column;
   gap: 20px;
 }
-.management header .right-content form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
 @media screen and (max-width: 376px) {
   .management header .right-content .action {
     display: flex;
@@ -147,7 +184,6 @@ input:focus {
   }
 }
 .management .list-card {
-  background-color: #101820;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -157,6 +193,11 @@ input:focus {
   .management .list-card {
     grid-template-columns: 1fr;
   }
+}
+.management .create-form {
+  color: #ffdd00;
+  padding: 2rem;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
