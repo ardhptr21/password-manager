@@ -5,7 +5,6 @@
 }
 
 .btn {
-  font-family: Helvetica, sans-serif;
   padding: 1rem 1.8rem;
   cursor: pointer;
   background-color: #101820;
@@ -28,6 +27,44 @@
 }
 .btn:hover {
   transform: translateY(-5px);
+}
+.btn-badge {
+  border-radius: 1.8em;
+  padding: 0.3rem 0.7rem;
+  font-size: small;
+}
+.btn-edit {
+  background-color: #2c599d;
+  color: #f2f3f4;
+}
+.btn-delete {
+  background-color: #e94b3c;
+  color: #f2f3f4;
+}
+
+table {
+  border: 1px solid #f2f3f4;
+  border-radius: 10px;
+  width: 100%;
+}
+table th,
+table td {
+  border-collapse: collapse;
+  padding: 0.77rem;
+}
+table thead th {
+  color: #ffdd00;
+}
+table a.link {
+  color: #f2f3f4;
+  text-decoration: none;
+}
+table a.link:hover {
+  color: #ffdd00;
+  text-decoration: underline;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #192531;
 }
 
 /*# sourceMappingURL=base.css.map */

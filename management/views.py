@@ -6,7 +6,6 @@ from .forms import ManagementCreateForm
 
 class ManagementListView(ListView):
     model = Account
-    template_name = 'management/list.html'
     ordering = ('-id',)
     context_object_name = 'accounts'
 

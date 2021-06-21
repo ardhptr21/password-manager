@@ -199,5 +199,13 @@ body {
   padding: 2rem;
   margin-top: 2rem;
 }
+.management .manage-content {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #f2f3f4;
+}
 
 /*# sourceMappingURL=main.css.map */

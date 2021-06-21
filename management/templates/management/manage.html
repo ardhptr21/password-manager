@@ -1,0 +1,52 @@
+{% extends 'management/base.html' %} {% load static %}
+
+<!-- TITLE PAGE -->
+{% block title %}{{ block.super }} | Manage{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="management">
+  <header>
+    <div class="left-content">
+      <img src="{% static 'management/images/manage.svg' %}" alt="the illustration image" />
+    </div>
+    <div class="right-content">
+      <h1 class="title-page">Manage Your Account List</h1>
+      <div class="action">
+        <a href="{% url 'management:list' %}" class="btn">Show All</a>
+        <a href="{% url 'management:create' %}" class="btn">Create New</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="manage-content">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Site Name</th>
+          <th>Email</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for account in accounts %}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td><a class="link" href="{{account.site_name}}" target="_blank">{{account.site_name}}</a></td>
+          <td>{{account.email}}</td>
+          <td>{{account.username}}</td>
+          <td>{{account.password}}</td>
+          <td>
+            <a href="#" class="btn btn-badge btn-edit">Edit</a>
+            <a href="#" class="btn btn-badge btn-delete">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}

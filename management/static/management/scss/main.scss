@@ -64,4 +64,13 @@
     padding: 2rem;
     margin-top: 2rem;
   }
+
+  .manage-content {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: $white-color;
+  }
 }

@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+table {
+  border: 1px solid $white-color;
+  border-radius: 10px;
+  width: 100%;
+
+  th,
+  td {
+    border-collapse: collapse;
+    padding: 0.77rem;
+  }
+
+  thead {
+    th {
+      color: $secondary-color;
+    }
+  }
+
+  a.link {
+    color: $white-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background-color: lighten($primary-color, 5%);
+    }
+  }
+}

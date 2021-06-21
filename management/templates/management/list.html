@@ -14,7 +14,7 @@
       <h1 class="title-page">Your Account and Password List</h1>
       <div class="action">
         <a href="{% url 'management:create' %}" class="btn">Create New</a>
-        <a href="#" class="btn">Manage</a>
+        <a href="{% url 'management:manage' %}" class="btn">Manage</a>
       </div>
       <form id="list-form" action="#">
         <input type="text" name="search" id="search" placeholder="Search by site name" required />
