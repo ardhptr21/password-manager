@@ -20,11 +20,8 @@
   </header>
 
   <div class="create-form">
-    <form id="create-form" action="#">
-      <input type="file" name="image" accept="image/*" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="text" name="username" placeholder="Username" />
-      <input type="text" name="password" placeholder="Password" />
+    <form id="create-form" method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {% for field in form %}{{field}}{% endfor %}
       <button type="submit" class="btn btn-white btn-sm">Create</button>
     </form>
   </div>

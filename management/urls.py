@@ -1,10 +1,10 @@
 from django.urls import path
-from django.views.generic.base import TemplateView
 from .views import (
     ManagementListView,
+    ManagementCreateView
 )
 
 urlpatterns = [
     path('list/', ManagementListView.as_view(), name='list'),
-    path('create/', TemplateView.as_view(template_name="management/create.html"), name='create')
+    path('create/', ManagementCreateView.as_view(), name='create')
 ]
