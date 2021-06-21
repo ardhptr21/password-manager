@@ -24,7 +24,11 @@
   </header>
 
   <div class="list-card">
-    {% include 'management/partials/card.html' %} {% include 'management/partials/card.html' %}
+    {% for account in accounts %}
+    <!-- include card content -->
+    {% include 'management/partials/card.html' with img_url=account.image_site.url site_name=account.site_name username=account.username email=account.email password=account.password%}
+    <!-- include card content -->
+    {% endfor %}
   </div>
 </div>
 
