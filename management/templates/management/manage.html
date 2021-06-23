@@ -40,7 +40,7 @@
           <td>{{account.username}}</td>
           <td>{{account.password}}</td>
           <td>
-            <a href="#" class="btn btn-badge btn-edit">Edit</a>
+            <a href="{% url 'management:update' account.id %}" class="btn btn-badge btn-edit">Edit</a>
             <a href="#" class="btn btn-badge btn-delete">Delete</a>
           </td>
         </tr>

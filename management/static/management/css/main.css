@@ -207,5 +207,20 @@ body {
   margin-top: 10px;
   color: #f2f3f4;
 }
+.management .current-image {
+  width: 100%;
+  margin-top: -1rem;
+  text-align: left;
+}
+.management .current-image small {
+  color: #f2f3f4;
+}
+.management .current-image small a {
+  color: #ffdd00;
+  text-decoration: none;
+}
+.management .current-image small a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+{% extends 'management/base.html' %} {% load static %}
+
+<!-- PAGE TITLE -->
+{% block title %}{{ block.super }} | Create{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="management">
+  <header>
+    <div class="left-content">
+      <img src="{% static 'management/images/update.svg' %}" alt="the illustration image" />
+    </div>
+    <div class="right-content">
+      <h1 class="title-page">Update Your Account In Here</h1>
+      <div class="action">
+        <a href="{% url 'management:list' %}" class="btn">Show All</a>
+        <a href="{% url 'management:manage' %}" class="btn">Manage</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="create-form">
+    <form id="create-form" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <!-- RENDER FILE IMAGE FIELD -->
+      <input type="file" name="image_site" accept="image/*" />
+      <div class="current-image">
+        <small>Current: <a href="{{img_url}}" target="_blank">{{img_url}}</a></small>
+      </div>
+      <!-- RENDER FIELDS EXCLUDE TYPE FILE -->
+      {% for field in form %} {% if field.html_name != 'image_site' %}{{field}}{% endif %} {% endfor %}
+      <button type="submit" class="btn btn-white btn-sm">Update</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}
