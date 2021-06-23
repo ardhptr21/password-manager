@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Account
 from .forms import ManagementCreateForm
 
@@ -23,5 +23,10 @@ class ManagementUpdateView(UpdateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update({'img_url': self.get_object().image_site.url})
-        print(context)
         return context
+
+
+class ManagementDeleteView(DeleteView):
+    model = Account
+    template_name = 'management/delete_confirm.html'
+    success_url = reverse_lazy('management:manage')

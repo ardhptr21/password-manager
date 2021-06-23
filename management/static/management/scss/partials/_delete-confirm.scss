@@ -1,0 +1,23 @@
+@use './variables' as *;
+
+.delete-confirm {
+  min-height: 100vh;
+  background-color: $secondary-color;
+  display: grid;
+  place-items: center;
+
+  .card-delete {
+    max-width: 80vw;
+    background-color: $primary-color;
+    border-radius: 10px;
+    padding: 2rem;
+    color: $white-color;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    p {
+      margin: 10px 0;
+      color: darken($white-color, 30%);
+      font-size: 1.2em;
+    }
+  }
+}

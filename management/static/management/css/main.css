@@ -139,6 +139,27 @@ body {
   border-color: #ffdd00;
 }
 
+.delete-confirm {
+  min-height: 100vh;
+  background-color: #ffdd00;
+  display: grid;
+  place-items: center;
+}
+.delete-confirm .card-delete {
+  max-width: 80vw;
+  background-color: #101820;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #f2f3f4;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.delete-confirm .card-delete p {
+  margin: 10px 0;
+  color: #9fa7ae;
+  font-size: 1.2em;
+}
+
 .management {
   min-height: 100vh;
   background-color: #101820;

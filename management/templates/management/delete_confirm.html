@@ -1,0 +1,19 @@
+{% extends 'management/base.html' %}
+
+<!-- PAGE TITLE -->
+{% block title %}{{ block.super }} | Delete{% endblock title %}
+
+<!-- MAIN CONTENT -->
+{% block content %}
+<div class="delete-confirm">
+  <div class="card-delete">
+    <h1>Delete Account</h1>
+    <p>Are you sure you want to delete the account information related to <a href="#">{{account.site_name}}</a></p>
+    <a href="{% url 'management:manage' %}" class="btn btn-white btn-sm">Cancel</a>
+    <form method="post" style="display: inline-block">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-delete btn-sm">Confirm</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}
