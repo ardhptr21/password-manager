@@ -14,9 +14,16 @@
       <img src="{% static 'auth/images/login.svg' %}" alt="" />
     </div>
     <div class="right-content">
-      <form action="">
-        <input type="text" name="username" id="username" autocomplete="off" placeholder="username" required />
-        <input type="password" name="password" id="password" placeholder="password" required />
+      <form method="POST">
+        {% csrf_token %} {% for field in form %} {{field.label_tag}} {{field}}{% endfor %}
+        <!-- SHOW ERROR MESSAGE -->
+        {{form.non_field_errors}}
+        <!-- NEXT FIELD -->
+        {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{request.GET.next}}" />
+        {% else %}
+        <input type="hidden" name="next" value="/" />
+        {% endif %}
         <button type="submit" class="btn btn-white btn-sm">Login</button>
         <a href="{% url 'auth:register' %}" class="reglog">Don't have an account? register</a>
       </form>

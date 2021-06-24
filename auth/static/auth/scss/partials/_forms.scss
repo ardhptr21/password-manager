@@ -4,20 +4,34 @@
 form {
   @include flex-center(column);
   width: 100%;
-}
+  input {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border: 1px solid $white-color;
+    color: $white-color;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0.7rem;
 
-input {
-  width: 100%;
-  display: block;
-  margin: 10px 0;
-  border: 1px solid $white-color;
-  color: $secondary-color;
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 0.7rem;
-}
-input:focus,
-input:valid {
-  outline: none;
-  border: 1px solid $secondary-color;
+    &:focus {
+      outline: none;
+      border: 1px solid $secondary-color;
+    }
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .errorlist {
+    background-color: #e94b3c;
+    border-radius: 10px;
+    padding: 1rem;
+    color: lighten(#e94b3c, 30%);
+
+    li {
+      margin-left: 15px;
+    }
+  }
 }
