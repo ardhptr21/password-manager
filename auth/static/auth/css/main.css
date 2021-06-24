@@ -44,22 +44,31 @@ form {
   flex-direction: column;
   width: 100%;
 }
-
-input {
+form input {
   width: 100%;
   display: block;
   margin: 10px 0;
   border: 1px solid #f2f3f4;
-  color: #ffdd00;
+  color: #f2f3f4;
   background-color: transparent;
   border-radius: 10px;
   padding: 0.7rem;
 }
-
-input:focus,
-input:valid {
+form input:focus {
   outline: none;
   border: 1px solid #ffdd00;
+}
+form label {
+  width: 100%;
+}
+form .errorlist {
+  background-color: #e94b3c;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #f9cac5;
+}
+form .errorlist li {
+  margin-left: 15px;
 }
 
 .auth {
