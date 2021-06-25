@@ -11,7 +11,11 @@
       <h1 class="title-page">password manager</h1>
       <p class="desc-title">Save your social media account password here, so you don't forget it</p>
       {% if request.user.is_authenticated %}
+<<<<<<< HEAD
       <a href="{% url 'management:list' %}" class="btn">Show All</a>
+=======
+      <a href="{ % url 'management:list' %}" class="btn">Show All</a>
+>>>>>>> 292ad39b829f7b9a88bb8681260584d635206adc
       {% else %}
       <a href="{% url 'auth:login' %}" class="btn">Login</a>
       {% endif %}
