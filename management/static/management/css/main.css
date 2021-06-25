@@ -139,6 +139,18 @@ body {
   outline: none;
   border-color: #ffdd00;
 }
+#create-form .errorlist {
+  background-color: #e94b3c;
+  border-radius: 10px;
+  padding: 0.4rem;
+  color: #f9cac5;
+  width: 100%;
+}
+#create-form .errorlist li {
+  list-style: none;
+  font-size: 0.8rem;
+  margin-left: 15px;
+}
 
 .delete-confirm {
   min-height: 100vh;
