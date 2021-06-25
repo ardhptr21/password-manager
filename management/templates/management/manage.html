@@ -16,6 +16,7 @@
         <a href="{% url 'management:list' %}" class="btn">Show All</a>
         <a href="{% url 'management:create' %}" class="btn">Create New</a>
       </div>
+      {% include 'management/partials/form-search.html' %}
     </div>
   </header>
 

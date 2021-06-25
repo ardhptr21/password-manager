@@ -1,3 +1,5 @@
+from django.http import request
+from django.utils.datastructures import MultiValueDict, MultiValueDictKeyError
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Account
@@ -8,6 +10,13 @@ class ManagementListView(ListView):
     model = Account
     ordering = ('-id',)
     context_object_name = 'accounts'
+
+    def get_queryset(self):
+        try:
+            search = self.request.GET['search']
+            return self.model.objects.filter(site_name__icontains=search)
+        except MultiValueDictKeyError:
+            return super().get_queryset()
 
 
 class ManagementCreateView(CreateView):
