@@ -5,6 +5,7 @@
   overflow: hidden;
   border-radius: 10px;
   background-color: lighten($primary-color, 5%);
+  max-width: 500px;
 
   .image-site {
     width: 100%;

@@ -21,6 +21,7 @@
   </header>
 
   <div class="manage-content">
+    {% if accounts|length > 0 %}
     <table>
       <thead>
         <tr>
@@ -48,6 +49,7 @@
         {% endfor %}
       </tbody>
     </table>
+    {% else %} {% include 'no-data-found.html' %} {% endif %}
   </div>
 </div>
 {% endblock content %}

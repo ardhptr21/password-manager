@@ -53,6 +53,7 @@ body {
   overflow: hidden;
   border-radius: 10px;
   background-color: #192531;
+  max-width: 500px;
 }
 .card .image-site {
   width: 100%;
