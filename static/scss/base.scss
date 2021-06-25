@@ -1,3 +1,7 @@
 @use './partials/reset';
 @use './partials/button';
 @use './partials/table';
+@use './partials/logout';
+body {
+  position: relative;
+}

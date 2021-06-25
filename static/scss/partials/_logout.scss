@@ -1,0 +1,20 @@
+@use './variables' as *;
+
+.logout-btn {
+  position: fixed;
+  width: 50px;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  z-index: 9999;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: $primary-color;
+  border: 1px solid $secondary-color;
+  cursor: pointer;
+
+  a {
+    display: grid;
+    place-items: center;
+    color: $secondary-color;
+  }
+}

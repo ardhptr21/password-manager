@@ -67,4 +67,26 @@ table tbody tr:nth-child(odd) {
   background-color: #192531;
 }
 
+.logout-btn {
+  position: fixed;
+  width: 50px;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  z-index: 9999;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #101820;
+  border: 1px solid #ffdd00;
+  cursor: pointer;
+}
+.logout-btn a {
+  display: grid;
+  place-items: center;
+  color: #ffdd00;
+}
+
+body {
+  position: relative;
+}
+
 /*# sourceMappingURL=base.css.map */
