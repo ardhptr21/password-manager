@@ -22,14 +22,6 @@ body {
     font-size: 1rem;
   }
 }
-.reglog {
-  color: $white-color;
-  margin-top: 10px;
-
-  &:hover {
-    color: $secondary-color;
-  }
-}
 .text {
   @include flex-center(column);
 }
