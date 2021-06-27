@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './mixins' as *;
 
 .no-data-found {
   text-align: center;
@@ -11,16 +12,26 @@
 
   img {
     width: 250px;
+
+    @include media-query(576px) {
+      width: 80%;
+    }
   }
 
   h1 {
     font-size: 4rem;
     color: darken($white-color, 20%);
     text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+    @include media-query(576px) {
+      font-size: 2.5rem;
+    }
   }
 
   h2 {
     color: darken($white-color, 40%);
     font-weight: 500;
+    @include media-query(576px) {
+      font-size: 1rem;
+    }
   }
 }

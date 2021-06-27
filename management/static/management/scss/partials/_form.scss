@@ -1,17 +1,5 @@
 @use './variables' as *;
-
-#search {
-  padding: 0.5rem;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  border: 2px solid $primary-color;
-  background-color: darken($white-color, 5%);
-
-  &:focus {
-    outline: none;
-  }
-}
+@use './mixins' as *;
 
 #list-form {
   width: 100%;
@@ -19,6 +7,37 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @include media-query(475px) {
+    flex-direction: column;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn-all-list {
+    @include media-query(475px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  #search {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 2px solid $primary-color;
+    background-color: darken($white-color, 5%);
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 #create-form {
@@ -27,7 +46,8 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width: 70%;
+  width: 100%;
+  max-width: 700px;
   margin: auto;
 
   .btn {

@@ -1,7 +1,9 @@
 <form id="list-form">
-  <input type="text" name="search" id="search" placeholder="Search by site name" required />
-  <button class="btn btn-sm btn-white">Search</button>
+  <div class="main">
+    <input type="text" name="search" id="search" placeholder="Search by site name" required />
+    <button class="btn btn-sm btn-white">Search</button>
+  </div>
   {% if request.GET.search %}
-  <a href="{% if isList %}{% url 'management:list' %}{% else %}{% url 'management:manage' %}{% endif %}" class="btn btn-sm">All</a>
+  <a href="{% if isList %}{% url 'management:list' %}{% else %}{% url 'management:manage' %}{% endif %}" class="btn btn-sm btn-all-list">All</a>
   {% endif %}
 </form>

@@ -88,7 +88,32 @@ body {
   cursor: pointer;
 }
 
-#search {
+#list-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 475px) {
+  #list-form {
+    flex-direction: column;
+  }
+}
+#list-form .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+@media screen and (max-width: 475px) {
+  #list-form .btn-all-list {
+    width: 100%;
+    text-align: center;
+  }
+}
+#list-form #search {
   padding: 0.5rem;
   width: 100%;
   max-width: 400px;
@@ -96,16 +121,8 @@ body {
   border: 2px solid #101820;
   background-color: #e4e6e8;
 }
-#search:focus {
+#list-form #search:focus {
   outline: none;
-}
-
-#list-form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 }
 
 #create-form {
@@ -114,7 +131,8 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  width: 70%;
+  width: 100%;
+  max-width: 700px;
   margin: auto;
 }
 #create-form .btn {
@@ -240,6 +258,19 @@ body {
   align-items: center;
   margin-top: 10px;
   color: #f2f3f4;
+}
+@media screen and (max-width: 768px) {
+  .management .manage-content {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.management .manage-content .btn-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .management .current-image {
   width: 100%;

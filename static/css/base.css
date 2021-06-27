@@ -79,6 +79,11 @@ table tbody tr:nth-child(odd) {
   border: 1px solid #ffdd00;
   cursor: pointer;
 }
+@media screen and (max-width: 576px) {
+  .logout-btn {
+    width: 35px;
+  }
+}
 .logout-btn a {
   display: grid;
   place-items: center;
@@ -97,14 +102,29 @@ table tbody tr:nth-child(odd) {
 .no-data-found img {
   width: 250px;
 }
+@media screen and (max-width: 576px) {
+  .no-data-found img {
+    width: 80%;
+  }
+}
 .no-data-found h1 {
   font-size: 4rem;
   color: #bbc0c5;
   text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
 }
+@media screen and (max-width: 576px) {
+  .no-data-found h1 {
+    font-size: 2.5rem;
+  }
+}
 .no-data-found h2 {
   color: #848d97;
   font-weight: 500;
+}
+@media screen and (max-width: 576px) {
+  .no-data-found h2 {
+    font-size: 1rem;
+  }
 }
 
 body {
