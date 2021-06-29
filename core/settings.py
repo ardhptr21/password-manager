@@ -134,3 +134,7 @@ MEDIA_URL = '/media/'
 
 # LOGIN CONFIG
 LOGIN_URL = reverse_lazy('auth:login')
+
+# DROPBOX CONFIG UPLOAD FILE
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = os.environ.get("DROPBOX_TOKEN")
