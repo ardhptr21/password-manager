@@ -90,6 +90,35 @@ table tbody tr:nth-child(odd) {
   color: #ffdd00;
 }
 
+.pagination {
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  overflow-x: auto;
+}
+.pagination .prev,
+.pagination .next {
+  transform: translateY(3px);
+}
+.pagination .prev:hover {
+  transform: translate(-5px, 3px);
+}
+.pagination .next:hover {
+  transform: translate(5px, 3px);
+}
+.pagination .active {
+  pointer-events: none;
+}
+.pagination .btn {
+  padding: 10px;
+  width: 40px;
+}
+.pagination .btn-num {
+  border: 1px solid #ffdd00;
+  margin: 0 5px;
+}
+
 .no-data-found {
   text-align: center;
   margin: auto;

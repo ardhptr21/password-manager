@@ -2,6 +2,7 @@
 @use './partials/button';
 @use './partials/table';
 @use './partials/logout';
+@use './partials/pagination';
 @use './partials/no-data-found';
 body {
   position: relative;

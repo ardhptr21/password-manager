@@ -9,6 +9,7 @@ from .forms import ManagementCreateForm
 class ManagementListView(ListView):
     model = Account
     ordering = ('-id',)
+    paginate_by = 6
     context_object_name = 'accounts'
 
     def get_queryset(self):
