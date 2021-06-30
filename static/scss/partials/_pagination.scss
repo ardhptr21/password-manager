@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+.pagination {
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  overflow-x: auto;
+
+  .prev,
+  .next {
+    transform: translateY(3px);
+  }
+
+  .prev:hover {
+    transform: translate(-5px, 3px);
+  }
+  .next:hover {
+    transform: translate(5px, 3px);
+  }
+
+  .active {
+    pointer-events: none;
+  }
+
+  .btn {
+    padding: 10px;
+    width: 40px;
+
+    &-num {
+      border: 1px solid $secondary-color;
+      margin: 0 5px;
+    }
+  }
+}
